@@ -1,0 +1,38 @@
+{
+  "top_k": 5,
+  "case_count": 5,
+  "avg_answer_keyword_hit_rate": 0.933,
+  "avg_citation_keyword_hit_rate": 0.3,
+  "details": [
+    {
+      "question": "赤壁之战前孙刘联盟如何形成？",
+      "answer_keyword_hit_rate": 1.0,
+      "citation_keyword_hit_rate": 0.25,
+      "citations_count": 5
+    },
+    {
+      "question": "诸葛亮出山的关键背景是什么？",
+      "answer_keyword_hit_rate": 1.0,
+      "citation_keyword_hit_rate": 0.25,
+      "citations_count": 5
+    },
+    {
+      "question": "桃园结义讲的是哪三个人？",
+      "answer_keyword_hit_rate": 1.0,
+      "citation_keyword_hit_rate": 0.333,
+      "citations_count": 5
+    },
+    {
+      "question": "官渡之战中曹操的对手是谁？",
+      "answer_keyword_hit_rate": 1.0,
+      "citation_keyword_hit_rate": 0.333,
+      "citations_count": 5
+    },
+    {
+      "question": "空城计对应的主要人物是谁？",
+      "answer_keyword_hit_rate": 0.667,
+      "citation_keyword_hit_rate": 0.333,
+      "citations_count": 5
+    }
+  ]
+}

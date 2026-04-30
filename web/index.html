@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanguo RAG Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; max-width: 900px; }
+    h1 { margin-bottom: 8px; }
+    .hint { color: #666; margin-bottom: 16px; }
+    textarea { width: 100%; min-height: 80px; padding: 10px; font-size: 14px; }
+    input { width: 80px; padding: 6px; margin-left: 8px; }
+    button { padding: 8px 14px; margin-top: 10px; cursor: pointer; }
+    .panel { margin-top: 18px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+    .label { font-weight: bold; margin-bottom: 8px; display: block; }
+    pre { white-space: pre-wrap; word-break: break-word; margin: 0; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Sanguo Enterprise RAG</h1>
+  <div class="hint">最小前端演示页：输入问题 -> 调用 <code>/ask</code> -> 展示答案与引用。</div>
+
+  <label for="question" class="label">问题</label>
+  <textarea id="question" placeholder="例如：赤壁之战前孙刘联盟如何形成？"></textarea>
+
+  <div style="margin-top: 10px;">
+    <label for="topk">top_k</label>
+    <input id="topk" type="number" min="1" max="20" value="5" />
+    <label for="recallTopk" style="margin-left: 12px;">recall_top_k</label>
+    <input id="recallTopk" type="number" min="1" max="100" value="30" />
+  </div>
+
+  <button id="askBtn">提交问题</button>
+
+  <div class="panel">
+    <span class="label">答案</span>
+    <pre id="answer">（等待提问）</pre>
+  </div>
+
+  <div class="panel">
+    <span class="label">引用片段</span>
+    <ul id="citations"></ul>
+  </div>
+
+  <script>
+    const askBtn = document.getElementById("askBtn");
+    const questionEl = document.getElementById("question");
+    const topkEl = document.getElementById("topk");
+    const recallTopkEl = document.getElementById("recallTopk");
+    const answerEl = document.getElementById("answer");
+    const citationsEl = document.getElementById("citations");
+
+    askBtn.addEventListener("click", async () => {
+      const question = questionEl.value.trim();
+      const top_k = Number(topkEl.value || 5);
+      const recall_top_k = Number(recallTopkEl.value || 30);
+      if (!question) {
+        alert("请先输入问题");
+        return;
+      }
+
+      askBtn.disabled = true;
+      answerEl.textContent = "请求中...";
+      citationsEl.innerHTML = "";
+
+      try {
+        const resp = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, top_k, recall_top_k }),
+        });
+
+        if (!resp.ok) {
+          const text = await resp.text();
+          throw new Error("请求失败: " + text);
+        }
+
+        const data = await resp.json();
+        answerEl.textContent = data.answer || "（无回答）";
+
+        const citations = data.citations || [];
+        if (!citations.length) {
+          citationsEl.innerHTML = "<li>（无引用）</li>";
+        } else {
+          citations.forEach((c) => {
+            const li = document.createElement("li");
+            li.textContent =
+              `[${c.chunk_id}] 第${c.chapter_no}回 ${c.chapter_title} | score=${Number(c.score).toFixed(4)} | ` +
+              `${(c.content || "").slice(0, 120)}...`;
+            citationsEl.appendChild(li);
+          });
+        }
+      } catch (err) {
+        answerEl.textContent = String(err);
+      } finally {
+        askBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
