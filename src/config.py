@@ -25,6 +25,9 @@ EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "").strip()
 RECALL_TOP_K = int(os.getenv("RECALL_TOP_K", "30"))
 VECTOR_RRF_K = int(os.getenv("VECTOR_RRF_K", "60"))
 KEYWORD_RRF_K = int(os.getenv("KEYWORD_RRF_K", "60"))
+ENABLE_RERANKER = os.getenv("ENABLE_RERANKER", "true").lower() == "true"
+# 语义重排前最多对多少条候选做 embedding（控制成本与评测耗时）
+RERANK_CANDIDATE_CAP = int(os.getenv("RERANK_CANDIDATE_CAP", "48"))
 
 # Day08 文本默认路径
 DEFAULT_SANGUO_PATH = (

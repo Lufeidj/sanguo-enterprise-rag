@@ -2,10 +2,12 @@
 
 企业级教学版《三国演义》RAG 项目（Milvus + FastAPI）。
 
+**小白向全流程说明**（环境 → 入库 → 检索 → 生成）：见 [课上/理解/端到端流程详解.md](课上/理解/端到端流程详解.md)。
+
 ## 功能
 - 章节感知切块（优先按“第X回”切分）
 - 入库到 Milvus（含章节、摘要、来源元数据）
-- 混合召回问答（向量 + BM25 融合，返回引用片段）
+- 混合召回问答（向量 + BM25 融合 + 语义重排，返回引用片段）
 
 ## 快速开始
 1. 安装依赖
@@ -28,6 +30,7 @@
 可选：手动导入
 - `python scripts/ingest_sanguo.py`
 - `python scripts/eval_basic.py`（生成基础评测报告）
+- `python scripts/eval_grid.py`（网格评测：top_k / recall_top_k / reranker）
 
 ## 接口
 - `GET /health`

@@ -69,8 +69,7 @@ def generate_answer(question: str, contexts: list[str]) -> str:
     1) 未配置真实 LLM：返回教学模式拼接答案
     2) 已配置真实 LLM：调用 chat.completions 生成自然语言回答
     """
-    if not LLM_API_KEY or not LLM_BASE_URL or not LLM_MODEL:
-        # 教学回退模式：不用外部模型也能跑通“检索+回答”链路
+    def _fallback_text() -> str:
         joined = "\n".join(contexts[:3])
         return (
             "【教学模式回答】\n"
@@ -78,6 +77,10 @@ def generate_answer(question: str, contexts: list[str]) -> str:
             "根据检索片段，建议答案如下（可配置真实 LLM 获得更自然生成）：\n"
             f"{joined[:500]}"
         )
+
+    if not LLM_API_KEY or not LLM_BASE_URL or not LLM_MODEL:
+        # 教学回退模式：不用外部模型也能跑通“检索+回答”链路
+        return _fallback_text()
 
     # 真实模型模式
     client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
@@ -87,9 +90,13 @@ def generate_answer(question: str, contexts: list[str]) -> str:
         "上下文：\n"
         + "\n\n".join(contexts[:5])
     )
-    resp = client.chat.completions.create(
-        model=LLM_MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.2,
-    )
-    return resp.choices[0].message.content or ""
+    try:
+        resp = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.2,
+        )
+        return resp.choices[0].message.content or ""
+    except Exception:
+        # 生产兜底：外部 LLM 网络/配额问题时，服务仍返回可解释结果。
+        return _fallback_text()

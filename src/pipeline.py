@@ -1,9 +1,16 @@
 from pathlib import Path
 
 from .chunking import build_chunks
-from .config import DEFAULT_SANGUO_PATH, KEYWORD_RRF_K, RECALL_TOP_K, VECTOR_RRF_K
+from .config import (
+    DEFAULT_SANGUO_PATH,
+    ENABLE_RERANKER,
+    KEYWORD_RRF_K,
+    RECALL_TOP_K,
+    VECTOR_RRF_K,
+)
 from .llm import embed_query, embed_texts, generate_answer
 from .retrieval import BM25Retriever
+from .reranker import semantic_rerank
 from .schemas import AskResponse, Citation
 from .vector_store import SanguoVectorStore
 
@@ -100,7 +107,12 @@ def _hybrid_rerank(vector_hits: list[dict], bm25_hits: list[dict]) -> list[dict]
     return [h for _, h in fused]
 
 
-def ask_question(question: str, top_k: int = 5, recall_top_k: int | None = None) -> AskResponse:
+def ask_question(
+    question: str,
+    top_k: int = 5,
+    recall_top_k: int | None = None,
+    enable_reranker: bool | None = None,
+) -> AskResponse:
     """
     RAG 问答主流程。
 
@@ -133,8 +145,15 @@ def ask_question(question: str, top_k: int = 5, recall_top_k: int | None = None)
         for d in bm25_docs
     ]
 
-    # 第二段：RRF 融合后截断为最终 top_k
-    reranked_hits = _hybrid_rerank(vector_hits, bm25_hits)[:top_k]
+    # 第二段：RRF 融合得到候选集
+    fused_hits = _hybrid_rerank(vector_hits, bm25_hits)
+    # 第三段：语义重排（可开关）
+    use_reranker = ENABLE_RERANKER if enable_reranker is None else enable_reranker
+    reranked_hits = (
+        semantic_rerank(question, fused_hits, top_n=top_k)
+        if use_reranker
+        else fused_hits[:top_k]
+    )
 
     # contexts 用于喂给大模型生成答案
     # citations 用于前端/调用方展示“答案来源”
@@ -153,7 +172,9 @@ def ask_question(question: str, top_k: int = 5, recall_top_k: int | None = None)
                 chunk_id=ent.get("id", ""),
                 chapter_no=int(ent.get("chapter_no", 0)),
                 chapter_title=ent.get("chapter_title", ""),
-                score=float(h.get("hybrid_score", h.get("distance", 0.0))),
+                score=float(
+                    h.get("rerank_score", h.get("hybrid_score", h.get("distance", 0.0)))
+                ),
                 content=content[:240],
             )
         )

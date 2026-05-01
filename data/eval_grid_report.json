@@ -1,0 +1,917 @@
+{
+  "options": {
+    "quick": false,
+    "case_count": 5
+  },
+  "grid": {
+    "top_k": [
+      3,
+      5,
+      8
+    ],
+    "recall_top_k": [
+      20,
+      30,
+      50
+    ],
+    "reranker_on": [
+      false,
+      true
+    ]
+  },
+  "best": {
+    "top_k": 5,
+    "recall_top_k": 50,
+    "reranker_on": false,
+    "case_count": 5,
+    "avg_answer_keyword_hit_rate": 0.567,
+    "avg_citation_keyword_hit_rate": 0.633,
+    "avg_latency_ms": 1419.3,
+    "composite_score": 0.5827,
+    "details": [
+      {
+        "question": "赤壁之战前孙刘联盟如何形成？",
+        "answer_keyword_hit_rate": 1.0,
+        "citation_keyword_hit_rate": 0.75,
+        "latency_ms": 1470.5,
+        "citations_count": 5
+      },
+      {
+        "question": "诸葛亮出山的关键背景是什么？",
+        "answer_keyword_hit_rate": 0.5,
+        "citation_keyword_hit_rate": 0.75,
+        "latency_ms": 1349.2,
+        "citations_count": 5
+      },
+      {
+        "question": "桃园结义讲的是哪三个人？",
+        "answer_keyword_hit_rate": 0.0,
+        "citation_keyword_hit_rate": 0.333,
+        "latency_ms": 1436.6,
+        "citations_count": 5
+      },
+      {
+        "question": "官渡之战中曹操的对手是谁？",
+        "answer_keyword_hit_rate": 1.0,
+        "citation_keyword_hit_rate": 1.0,
+        "latency_ms": 1461.2,
+        "citations_count": 5
+      },
+      {
+        "question": "空城计对应的主要人物是谁？",
+        "answer_keyword_hit_rate": 0.333,
+        "citation_keyword_hit_rate": 0.333,
+        "latency_ms": 1379.0,
+        "citations_count": 5
+      }
+    ]
+  },
+  "runs": [
+    {
+      "top_k": 5,
+      "recall_top_k": 50,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.633,
+      "avg_latency_ms": 1419.3,
+      "composite_score": 0.5827,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1470.5,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1349.2,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1436.6,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1461.2,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1379.0,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 50,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.633,
+      "avg_latency_ms": 1454.9,
+      "composite_score": 0.5815,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1591.8,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1350.7,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1412.6,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1423.2,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1496.4,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 30,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.583,
+      "avg_latency_ms": 1422.1,
+      "composite_score": 0.5676,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1266.6,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 1454.9,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1430.4,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1464.3,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1494.5,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 5,
+      "recall_top_k": 30,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.583,
+      "avg_latency_ms": 1424.1,
+      "composite_score": 0.5675,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1360.7,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 1484.6,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1327.5,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1430.2,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1517.4,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 20,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.583,
+      "avg_latency_ms": 1423.9,
+      "composite_score": 0.5675,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1403.1,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 1418.0,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1428.0,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1522.8,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1347.8,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 5,
+      "recall_top_k": 20,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.583,
+      "avg_latency_ms": 1430.8,
+      "composite_score": 0.5673,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1355.1,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 1341.8,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1503.7,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1526.2,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1427.2,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 20,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.583,
+      "avg_latency_ms": 1622.5,
+      "composite_score": 0.5609,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 2298.3,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 1462.9,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1352.4,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1457.5,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1541.3,
+          "citations_count": 3
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 30,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.6,
+      "avg_latency_ms": 4264.0,
+      "composite_score": 0.56,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 4266.7,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4291.2,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.667,
+          "latency_ms": 4440.4,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4217.4,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4104.5,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 50,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.6,
+      "avg_latency_ms": 4351.9,
+      "composite_score": 0.56,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 4282.1,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4483.4,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.667,
+          "latency_ms": 4420.1,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4358.0,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4215.8,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 30,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.533,
+      "avg_latency_ms": 1429.6,
+      "composite_score": 0.5523,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1482.2,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 1464.0,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1301.5,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1382.0,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1518.2,
+          "citations_count": 3
+        }
+      ]
+    },
+    {
+      "top_k": 8,
+      "recall_top_k": 20,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.55,
+      "avg_latency_ms": 4373.3,
+      "composite_score": 0.545,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 4317.1,
+          "citations_count": 8
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4308.8,
+          "citations_count": 8
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.667,
+          "latency_ms": 4311.5,
+          "citations_count": 8
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4416.4,
+          "citations_count": 8
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4512.9,
+          "citations_count": 8
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 50,
+      "reranker_on": false,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.567,
+      "avg_citation_keyword_hit_rate": 0.467,
+      "avg_latency_ms": 1424.6,
+      "composite_score": 0.5325,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 1476.2,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 1416.8,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.0,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 1560.8,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 1324.1,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 1345.1,
+          "citations_count": 3
+        }
+      ]
+    },
+    {
+      "top_k": 5,
+      "recall_top_k": 30,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.467,
+      "avg_latency_ms": 4175.2,
+      "composite_score": 0.52,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 4302.7,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4130.0,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4114.8,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4168.4,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4160.3,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 5,
+      "recall_top_k": 50,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.467,
+      "avg_latency_ms": 4373.2,
+      "composite_score": 0.52,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.75,
+          "latency_ms": 4249.1,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4488.9,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4313.3,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4438.9,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4375.9,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 5,
+      "recall_top_k": 20,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.417,
+      "avg_latency_ms": 4298.8,
+      "composite_score": 0.505,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.5,
+          "latency_ms": 4266.3,
+          "citations_count": 5
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4275.2,
+          "citations_count": 5
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4296.8,
+          "citations_count": 5
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4381.3,
+          "citations_count": 5
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4274.3,
+          "citations_count": 5
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 20,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.367,
+      "avg_latency_ms": 4371.2,
+      "composite_score": 0.49,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4334.6,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4314.6,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4250.1,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 1.0,
+          "latency_ms": 4338.7,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4617.9,
+          "citations_count": 3
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 30,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.233,
+      "avg_latency_ms": 4273.4,
+      "composite_score": 0.45,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4310.7,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4210.5,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4363.6,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4202.6,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4279.4,
+          "citations_count": 3
+        }
+      ]
+    },
+    {
+      "top_k": 3,
+      "recall_top_k": 50,
+      "reranker_on": true,
+      "case_count": 5,
+      "avg_answer_keyword_hit_rate": 0.633,
+      "avg_citation_keyword_hit_rate": 0.233,
+      "avg_latency_ms": 4408.0,
+      "composite_score": 0.45,
+      "details": [
+        {
+          "question": "赤壁之战前孙刘联盟如何形成？",
+          "answer_keyword_hit_rate": 1.0,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4410.2,
+          "citations_count": 3
+        },
+        {
+          "question": "诸葛亮出山的关键背景是什么？",
+          "answer_keyword_hit_rate": 0.5,
+          "citation_keyword_hit_rate": 0.25,
+          "latency_ms": 4328.2,
+          "citations_count": 3
+        },
+        {
+          "question": "桃园结义讲的是哪三个人？",
+          "answer_keyword_hit_rate": 0.333,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4209.7,
+          "citations_count": 3
+        },
+        {
+          "question": "官渡之战中曹操的对手是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.333,
+          "latency_ms": 4474.6,
+          "citations_count": 3
+        },
+        {
+          "question": "空城计对应的主要人物是谁？",
+          "answer_keyword_hit_rate": 0.667,
+          "citation_keyword_hit_rate": 0.0,
+          "latency_ms": 4617.3,
+          "citations_count": 3
+        }
+      ]
+    }
+  ]
+}
